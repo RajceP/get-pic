@@ -7,14 +7,9 @@ import Image from './components/Image';
 import Input from './components/Input';
 import WithLayout from './hoc/withLayout';
 import GlobalStyle from './styles/Global';
+import Theme from './styles/Theme';
 
-const FormContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
-
-const ImageContainer = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +17,7 @@ const ImageContainer = styled.div`
 
 const App = () => {
   const [input, setInput] = useState('');
-  const [url, setUrl] = useState();
+  const [url, setUrl] = useState(null);
 
   const handleChange = (event) => {
     setInput(event.target.value);
@@ -34,25 +29,28 @@ const App = () => {
   };
 
   return (
-    <>
+    <Theme>
       <GlobalStyle />
       <WithLayout>
-        <FormContainer>
+        <StyledContainer>
+          <p>
+            Welcome to GetPic. Type keywords to input bellow. Keywords should be separated by comma.
+          </p>
+        </StyledContainer>
+        <StyledContainer>
           <form onSubmit={(event) => handlePicLoad(event)}>
             <Input
               type="text"
-              placeholder="Text"
+              placeholder="Keywords..."
               value={input}
               onChange={(event) => handleChange(event)}
             />
             <Button type="submit">GetPic!</Button>
           </form>
-        </FormContainer>
-        <ImageContainer>
-          <Image src={url} alt="{input}" />
-        </ImageContainer>
+        </StyledContainer>
+        <StyledContainer>{url && <Image id="img" src={url} alt="{input}" />}</StyledContainer>
       </WithLayout>
-    </>
+    </Theme>
   );
 };
 

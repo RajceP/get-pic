@@ -3,8 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledMain = styled.main`
-  width: 100%;
-  padding: 16px;
+  padding: 8px;
 `;
 
 const WithLayout = ({ children }) => {

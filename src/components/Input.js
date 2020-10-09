@@ -5,6 +5,11 @@ import styled from 'styled-components';
 
 const StyledInput = styled.input`
   margin: 12px;
+  padding: 12px;
+  outline: none;
+  font-family: inherit;
+  border: 0.1px solid grey;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 `;
 
 const Input = ({ type, placeholder, value, onChange }) => {

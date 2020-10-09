@@ -19,7 +19,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   word-wrap: break-word;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-kerning: normal;
   overflow-x: hidden;
 }
