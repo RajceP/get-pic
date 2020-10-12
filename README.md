@@ -1,6 +1,6 @@
-# react-template
+# get-pic
 
-React Create App template with configured ESlint and Prettier.
+Small image grabber made with Unsplash API.
 
 ## Install dependencies:
 
