@@ -1,6 +1,5 @@
-import React from 'react';
-
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledImage = styled.img`
@@ -15,9 +14,7 @@ const StyledImage = styled.img`
   }
 `;
 
-const Image = ({ src, alt }) => {
-  return <StyledImage src={src} alt={alt} />;
-};
+const Image = ({ src, alt }) => <StyledImage src={src} alt={alt} />;
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,

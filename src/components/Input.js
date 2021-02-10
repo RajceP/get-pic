@@ -1,6 +1,5 @@
-import React from 'react';
-
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledInput = styled.input`
@@ -12,9 +11,9 @@ const StyledInput = styled.input`
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 `;
 
-const Input = ({ type, placeholder, value, onChange }) => {
-  return <StyledInput type={type} placeholder={placeholder} value={value} onChange={onChange} />;
-};
+const Input = ({ type, placeholder, value, onChange }) => (
+  <StyledInput type={type} placeholder={placeholder} value={value} onChange={onChange} />
+);
 
 Input.propTypes = {
   onChange: PropTypes.any.isRequired,

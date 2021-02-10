@@ -1,6 +1,5 @@
-import React from 'react';
-
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -14,9 +13,7 @@ const StyledButton = styled.button`
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 `;
 
-const Button = ({ type, children }) => {
-  return <StyledButton type={type}>{children}</StyledButton>;
-};
+const Button = ({ type, children }) => <StyledButton type={type}>{children}</StyledButton>;
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
